@@ -1,10 +1,14 @@
-/* Style for the landing page (index.html) */
+/* General Body Styling */
 body {
   font-family: Arial, sans-serif;
   text-align: center;
   background-color: #f4f4f9;
   margin: 0;
   padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Ensure the body takes the full height of the viewport */
 }
 
 h1 {
@@ -19,6 +23,7 @@ p {
   color: #333;
 }
 
+/* Button Styling */
 .button {
   background-color: #4CC3D9;
   color: white;
@@ -34,6 +39,47 @@ p {
 .button:hover {
   background-color: #45a3b8;
 }
+
 .button:active {
   background-color: #3b8a9c;
+}
+
+/* Content Container - Center all elements */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.5em; /* Reduce heading size on mobile */
+  }
+
+  p {
+    font-size: 1.1em; /* Reduce paragraph font size */
+  }
+
+  .button {
+    padding: 12px 25px; /* Smaller padding for mobile */
+    font-size: 1em; /* Smaller button font size */
+  }
+}
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 2em; /* Further reduce heading size on very small screens */
+  }
+
+  p {
+    font-size: 1em; /* Make text more readable on smaller screens */
+  }
+
+  .button {
+    padding: 10px 20px; /* Smaller padding for very small screens */
+    font-size: 1em; /* Adjust button size */
+  }
 }
