@@ -5,24 +5,24 @@ body {
     background-color: #f4f4f9;
     margin: 0;
     padding: 0;
-  }
-  
-  h1 {
+}
+
+h1 {
     color: #4CC3D9;
     font-size: 2.5em;
     margin-top: 50px;
-  }
-  
-  input {
+}
+
+input {
     padding: 10px;
     font-size: 1em;
     width: 60%;
     margin-top: 20px;
     border: 2px solid #4CC3D9;
     border-radius: 5px;
-  }
-  
-  button {
+}
+
+button {
     background-color: #4CC3D9;
     color: white;
     padding: 10px 20px;
@@ -31,20 +31,60 @@ body {
     margin-top: 20px;
     cursor: pointer;
     border-radius: 5px;
-  }
-  
-  button:hover {
+}
+
+button:hover {
     background-color: #45a3b8;
-  }
-  
-  canvas {
+}
+
+canvas {
     margin-top: 30px;
     border: 2px solid #4CC3D9;
     border-radius: 5px;
+}
+
+.qr-code-container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.2em; /* Slightly reduce heading size on mobile */
   }
-    .qr-code-container {
-        margin-top: 20px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }  
+
+  input {
+    width: 80%; /* Make input field wider on mobile */
+  }
+
+  button {
+    padding: 10px 25px; /* Adjust button padding on mobile */
+    font-size: 1em; /* Reduce font size slightly on smaller screens */
+  }
+
+  canvas {
+    width: 80%; /* Make canvas fit better on small screens */
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.8em; /* Further reduce heading size for small screens */
+  }
+
+  input {
+    width: 90%; /* Input field almost full width */
+  }
+
+  button {
+    padding: 8px 20px; /* Smaller button for very small screens */
+    font-size: 0.9em; /* Slightly smaller font size */
+  }
+
+  canvas {
+    width: 90%; /* Ensure canvas is appropriately scaled */
+  }
+}
