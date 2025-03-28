@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>AR Code Generator</title>
+        <link rel="stylesheet" href="style.css">
+      </head>
+        <script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>      
+</head>
+<body>
+  <h1>Welcome to the AR Code Generator!</h1>
+  <p>This site allows you to create QR codes that lead to an Augmented Reality (AR) experience. When you scan the QR code, AR content will appear in the real world through your phone or device's camera.</p>
+
+  <p>To get started, click the button below to generate a QR code that links to an AR experience.</p>
+
+  <a href="qr-code-generator.html" class="button">Generate Your QR Code</a>
+  <script src="index.js"></script>
+</body>
+<script>
+    function generateQRCode() {
+        const url = document.getElementById('ar-url').value;
+        const canvas = document.getElementById('qr-canvas');
+
+        if (url) {
+            // Generate QR code that links to the AR experience page
+            QRCode.toCanvas(canvas, url, function (error) {
+                if (error) console.error(error);
+                console.log('QR Code generated!');
+            });
+        } else {
+            alert("Please enter the URL for the AR experience.");
+        }
+    }
+</script>
+</html>

@@ -1,0 +1,26 @@
+/* Style for the AR Experience page (ar-experience.html) */
+body {
+    margin: 0;
+    overflow: hidden;
+    background-color: #000;
+  }
+  
+  h1 {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 10;
+    color: white;
+    font-size: 1.5em;
+    font-family: Arial, sans-serif;
+  }
+    .ar-container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }  

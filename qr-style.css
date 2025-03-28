@@ -1,0 +1,50 @@
+/* Style for the QR Code Generator page (qr-code-generator.html) */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+  }
+  
+  h1 {
+    color: #4CC3D9;
+    font-size: 2.5em;
+    margin-top: 50px;
+  }
+  
+  input {
+    padding: 10px;
+    font-size: 1em;
+    width: 60%;
+    margin-top: 20px;
+    border: 2px solid #4CC3D9;
+    border-radius: 5px;
+  }
+  
+  button {
+    background-color: #4CC3D9;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    font-size: 1.2em;
+    margin-top: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  button:hover {
+    background-color: #45a3b8;
+  }
+  
+  canvas {
+    margin-top: 30px;
+    border: 2px solid #4CC3D9;
+    border-radius: 5px;
+  }
+    .qr-code-container {
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }  
