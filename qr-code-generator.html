@@ -10,35 +10,31 @@
 <body>
   <div class="container">
     <h1>AR Code Generator</h1>
-    <p>Enter the URL of the AR experience (e.g., the AR experience page) and generate a QR code for it.</p>
+    <p>This tool generates a QR code that links to your AR experience. When scanned, it will take you to the AR experience page.</p>
 
-    <input type="text" id="ar-url" placeholder="Enter URL for AR Experience" />
-    <button class="button" onclick="generateQRCode()">Generate QR Code</button>
+    <button class="button" onclick="generateQRCode()">Generate AR QR Code</button>
     
     <canvas id="qr-canvas" style="margin-top: 20px;"></canvas> <!-- Where the QR code will appear -->
-
   </div>
 
   <script>
     function generateQRCode() {
-      const url = document.getElementById('ar-url').value; // Get the URL from input field
-      const canvas = document.getElementById('qr-canvas'); // Get the canvas element to display QR code
+        // Directly using the AR experience URL
+        const url = "https://deviljitu1.github.io/ar-qr-generator/ar-experience.html";
+        const canvas = document.getElementById('qr-canvas');
 
-      if (url) {
-        // Generate the QR code and render it to the canvas
-        QRCode.toCanvas(canvas, url, function (error) {
-          if (error) {
-            console.error(error);
-            alert("There was an error generating the QR code.");
-          } else {
-            console.log('QR Code generated successfully!');
-          }
-        });
-      } else {
-        alert("Please enter the URL for the AR experience.");
-      }
+        if (url) {
+            // Generate QR code that links to the AR experience page
+            QRCode.toCanvas(canvas, url, function (error) {
+                if (error) {
+                    console.error(error);
+                    alert("There was an error generating the QR code.");
+                } else {
+                    console.log('QR Code generated successfully!');
+                }
+            });
+        }
     }
   </script>
-
 </body>
 </html>
