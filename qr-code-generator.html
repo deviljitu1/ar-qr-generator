@@ -1,50 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>QR Code Generator</title>
-    <link rel="stylesheet" href="qr-style.css">
-    <script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
-  </head>
-  <body>
-    <h1>Welcome to the AR Code Generator!</h1>
-    <p>This site allows you to create QR codes that lead to an Augmented Reality (AR) experience. When you scan the QR code, AR content will appear in the real world through your phone or device's camera.</p>
-
-    <p>To get started, click the button below to generate a QR code that links to an AR experience.</p>
-
-    <a href="qr-code-generator.html" class="button">Generate Your QR Code</a>  
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>QR Code Generator</title>
-  <script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
+  <link rel="stylesheet" href="style.css"> <!-- Link to your main stylesheet -->
+  <script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script> <!-- QRCode.js library -->
 </head>
 <body>
-  <h1>AR Code Generator</h1>
-  <input type="text" id="ar-url" placeholder="Enter URL for AR Experience" />
-  <button onclick="generateQRCode()">Generate QR Code</button>
-  
-  <canvas id="qr-canvas"></canvas>
+  <div class="container">
+    <h1>AR Code Generator</h1>
+    <p>Enter the URL of the AR experience (e.g., the AR experience page) and generate a QR code for it.</p>
+
+    <input type="text" id="ar-url" placeholder="Enter URL for AR Experience" />
+    <button class="button" onclick="generateQRCode()">Generate QR Code</button>
+    
+    <canvas id="qr-canvas" style="margin-top: 20px;"></canvas> <!-- Where the QR code will appear -->
+
+  </div>
 
   <script>
     function generateQRCode() {
-      const url = document.getElementById('ar-url').value;
-      const canvas = document.getElementById('qr-canvas');
+      const url = document.getElementById('ar-url').value; // Get the URL from input field
+      const canvas = document.getElementById('qr-canvas'); // Get the canvas element to display QR code
 
       if (url) {
-        // Generate QR code that links to the AR experience page
+        // Generate the QR code and render it to the canvas
         QRCode.toCanvas(canvas, url, function (error) {
-          if (error) console.error(error);
-          console.log('QR Code generated!');
+          if (error) {
+            console.error(error);
+            alert("There was an error generating the QR code.");
+          } else {
+            console.log('QR Code generated successfully!');
+          }
         });
       } else {
         alert("Please enter the URL for the AR experience.");
       }
     }
   </script>
-<script src="qr-code-generator.js"></script>
+
 </body>
-</html>
-  <script src="index.js"></script>
 </html>
