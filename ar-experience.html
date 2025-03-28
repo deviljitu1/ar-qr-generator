@@ -1,28 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>AR Experience</title>
-        <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/gh/jeromeetienne/AR.js/aframe/build/aframe-ar.js"></script>
-        <link rel="stylesheet" href="ar-style.css">
-      </head>
-      <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AR Experience</title>
+
+    <!-- A-Frame Library -->
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+
+    <!-- AR.js Library -->
+    <script src="https://cdn.jsdelivr.net/gh/jeromeetienne/AR.js/aframe/build/aframe-ar.js"></script>
+
+    <!-- Custom Styles (Optional) -->
+    <link rel="stylesheet" href="ar-style.css">
 </head>
 <body>
-  <h1>Scan the QR Code to View AR Content!</h1>
+    <h1>Scan the QR Code to View AR Content!</h1>
 
-  <!-- A-Frame AR Scene -->
-  <a-scene embedded arjs>
-    <!-- Use the Hiro marker (or custom markers) -->
-    <a-marker preset="hiro">
-      <!-- Example of adding a 3D model or content -->
-      <a-box position="0 0.5 0" rotation="0 45 0" color="#4CC3D9"></a-box>
-    </a-marker>
-    <a-camera></a-camera>
-  </a-scene>
+    <!-- A-Frame AR Scene -->
+    <a-scene embedded arjs>
+        <!-- Hiro Marker -->
+        <a-marker preset="hiro">
+            <!-- Example of 3D Model -->
+            <a-box position="0 0.5 0" rotation="0 45 0" color="#4CC3D9"></a-box>
+        </a-marker>
 
+        <!-- Camera for AR -->
+        <a-camera></a-camera>
+    </a-scene>
 </body>
 </html>
